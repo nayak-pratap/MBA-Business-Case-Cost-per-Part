@@ -1,0 +1,13 @@
+{
+  "name": "mba-business-case-cost-per-part",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cost-per-part business case calculator: will a new cutting tool pay for itself?",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/calc.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
