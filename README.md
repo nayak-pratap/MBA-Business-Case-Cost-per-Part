@@ -12,7 +12,7 @@ Will the tool you are trialling pay for itself? Enter the tool you run today, th
 - a sensitivity table showing which input moves the answer most
 - a short summary you can paste into an email
 
-**Try it:** https://pratapnayak-eng.github.io/MBA-Business-Case-Cost-per-Part/index.html
+**Try it:** https://pratapnayak-eng.github.io/MBA-Business-Case-Cost-per-Part/
 
 Or open `index.html` in any browser. It works offline once loaded.
 
