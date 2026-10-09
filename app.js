@@ -479,6 +479,13 @@
     $('load-example').addEventListener('click', loadExample);
     $('clear-all').addEventListener('click', clearAll);
     $('copy').addEventListener('click', copySummary);
+    $('plan-toggle').addEventListener('click', function () {
+      var panel = $('plan-panel');
+      var open = panel.hidden;
+      panel.hidden = !open;
+      this.setAttribute('aria-expanded', String(open));
+      if (open) { $('plan-sd').focus(); }
+    });
     $('plan-sd').addEventListener('input', updatePlan);
     $('plan-margin').addEventListener('input', updatePlan);
 
