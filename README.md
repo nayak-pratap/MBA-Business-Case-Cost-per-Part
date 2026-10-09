@@ -1,6 +1,6 @@
 # MBA-Business-Case-Cost-per-Part
 
-A mobile-friendly business-case calculator for cutting-tool decisions. Free, no sign-in, nothing leaves your browser. It applies cost accounting, break-even analysis and statistical confidence (MBA coursework) to a shop-floor question.
+A mobile-friendly business-case calculator for cutting-tool decisions. Free, no sign-in, nothing leaves your browser. It applies three MBA subjects to a shop-floor question: **Management Accounting** (cost drivers, break-even, relevant costs), **Statistics** (confidence intervals, sample size, sensitivity) and **Operations** (bottlenecks and capacity).
 
 Will the tool you are trialling pay for itself? Enter the tool you run today, the one you are testing, and your trial results. You get:
 
@@ -43,6 +43,16 @@ npm test
 ```
 
 The 25 tests cover the calculation engine (`calc.js`), including the worked example above and the edge cases: no saving, a noisy trial, payback beyond a year, and a machine that is not the bottleneck.
+
+## What it covers, and what it does not
+
+| Subject | Applied here | Not covered |
+|---|---|---|
+| Management Accounting | Fixed and variable cost, cost drivers, break-even, margin of safety, relevant and sunk costs | Time value of money (no NPV), financial statements |
+| Statistics | t-based confidence interval, sample size for a mean, sensitivity analysis | Two-sample comparison (planned for v1.1); skewed tool-life distributions |
+| Operations | Bottleneck and opportunity cost | Queues, inventory, line balancing |
+
+It is a rule-based calculator, not an AI tool. It is prescriptive analytics: it recommends an action from the data. Links to the course concepts are in [`docs/course-links.md`](docs/course-links.md).
 
 ## Please note
 
