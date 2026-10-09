@@ -162,8 +162,9 @@
   .actions { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
   #copy-status { font-weight: 500; color: var(--go); }
 
-  details.plan summary { font: 700 22px var(--cond); cursor: pointer; min-height: 44px; display: flex; align-items: center; }
-  details.plan .grid { margin-top: 10px; }
+  .plan .grid { margin-top: 10px; }
+  .plan .help { margin-top: 12px; }
+  .plan-panel[hidden] { display: none; }
   #plan-out { margin-top: 12px; max-width: 62ch; }
 
   footer { margin-top: 8px; padding-top: 16px; border-top: 2px solid var(--ink); font-size: 14px; color: var(--muted); max-width: 70ch; }
@@ -291,15 +292,17 @@
       </div>
     </div>
 
-    <details class="plan block">
-      <summary>Plan a trial</summary>
+    <div class="plan block">
+      <div class="actions"><button type="button" id="plan-toggle" class="btn primary" aria-expanded="false" aria-controls="plan-panel">Plan a trial</button></div>
+      <div id="plan-panel" class="plan-panel" hidden>
       <p class="help">How many edges do you need to test? Give the spread you expect between edges and how close you want the average tool life.</p>
       <div class="grid">
         <div class="cell"><label for="plan-sd">Expected standard deviation</label><input id="plan-sd" type="number" inputmode="decimal" step="any"></div>
         <div class="cell"><label for="plan-margin">Wanted accuracy, plus or minus</label><input id="plan-margin" type="number" inputmode="decimal" step="any"></div>
       </div>
       <p id="plan-out" aria-live="polite"></p>
-    </details>
+      </div>
+    </div>
   </section>
 
   <footer>
